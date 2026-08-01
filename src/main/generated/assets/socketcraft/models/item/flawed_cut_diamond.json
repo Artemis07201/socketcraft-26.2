@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "socketcraft:item/flawed_cut_diamond"
+  }
+}
