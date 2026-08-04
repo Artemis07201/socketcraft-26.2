@@ -86,11 +86,5 @@ public class ModItems {
 
     public static void registerModItems() {
         SocketCraft.LOGGER.info("Registering mod items for " + SocketCraft.MOD_ID);
-
-        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register(output -> {
-            for (Item item : ITEM_LIST) {
-                output.accept(item);
-            }
-        });
     }
 }

@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
+import net.stellarartemis.socketcraft.block.ModBlocks;
 import net.stellarartemis.socketcraft.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
@@ -60,5 +61,28 @@ public class EnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.PLATINUM_SOCKET.getDescriptionId(), "Platinum Socket");
         translationBuilder.add(ModItems.TITANIUM_SOCKET.getDescriptionId(), "Titanium Socket");
         translationBuilder.add(ModItems.TUNGSTEN_SOCKET.getDescriptionId(), "Tungsten Socket");
+
+        translationBuilder.add(ModBlocks.TIN_ORE.getDescriptionId(), "Tin Ore");
+        translationBuilder.add(ModBlocks.DEEPSLATE_TIN_ORE.getDescriptionId(), "Deepslate Tin Ore");
+        translationBuilder.add(ModBlocks.RAW_TIN_BLOCK.getDescriptionId(), "Raw Tin Block");
+        translationBuilder.add(ModBlocks.TIN_BLOCK.getDescriptionId(), "Tin Block");
+
+        translationBuilder.add(ModBlocks.ALUMINUM_ORE.getDescriptionId(), "Aluminum Ore");
+        translationBuilder.add(ModBlocks.DEEPSLATE_ALUMINUM_ORE.getDescriptionId(), "Deepslate Aluminum Ore");
+        translationBuilder.add(ModBlocks.RAW_ALUMINUM_BLOCK.getDescriptionId(), "Raw Aluminum Block");
+        translationBuilder.add(ModBlocks.ALUMINUM_BLOCK.getDescriptionId(), "Aluminum Block");
+
+        translationBuilder.add(ModBlocks.PLATINUM_ORE.getDescriptionId(), "Platinum Ore");
+        translationBuilder.add(ModBlocks.DEEPSLATE_PLATINUM_ORE.getDescriptionId(), "Deepslate Platinum Ore");
+        translationBuilder.add(ModBlocks.RAW_PLATINUM_BLOCK.getDescriptionId(), "Raw Platinum Block");
+        translationBuilder.add(ModBlocks.PLATINUM_BLOCK.getDescriptionId(), "Platinum Block");
+
+        translationBuilder.add(ModBlocks.TITANIUM_ORE.getDescriptionId(), "Titanium Ore");
+        translationBuilder.add(ModBlocks.RAW_TITANIUM_BLOCK.getDescriptionId(), "Raw Titanium Block");
+        translationBuilder.add(ModBlocks.TITANIUM_BLOCK.getDescriptionId(), "Titanium Block");
+
+        translationBuilder.add(ModBlocks.TUNGSTEN_ORE.getDescriptionId(), "Tungsten Ore");
+        translationBuilder.add(ModBlocks.RAW_TUNGSTEN_BLOCK.getDescriptionId(), "Raw Tungsten Block");
+        translationBuilder.add(ModBlocks.TUNGSTEN_BLOCK.getDescriptionId(), "Tungsten Block");
     }
 }
