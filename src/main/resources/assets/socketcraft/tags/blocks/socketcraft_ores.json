@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "socketcraft:tin_ore",
+    "socketcraft:deepslate_tin_ore",
+    "socketcraft:aluminum_ore",
+    "socketcraft:deepslate_aluminum_ore",
+    "socketcraft:platinum_ore",
+    "socketcraft:deepslate_platinum_ore",
+    "socketcraft:titanium_ore",
+    "socketcraft:tungsten_ore",
+    "socketcraft:ruby_ore",
+    "socketcraft:deepslate_ruby_ore",
+    "socketcraft:sapphire_ore",
+    "socketcraft:deepslate_sapphire_ore",
+    "socketcraft:topaz_ore",
+    "socketcraft:deepslate_topaz_ore"
+  ]
+}

@@ -4,14 +4,18 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.stellarartemis.socketcraft.SocketCraft;
+import net.stellarartemis.socketcraft.item.ModItems;
 
 import java.util.List;
+import java.util.Map;
 import java.util.function.Function;
 
 public class ModBlocks {
@@ -87,12 +91,127 @@ public class ModBlocks {
             properties -> new Block(properties.strength(5.0F, 6.0F)
                     .requiresCorrectToolForDrops().sound(SoundType.METAL)));
     
+    public static final Block RUBY_ORE = registerBlock("ruby_ore",
+            properties -> new DropExperienceBlock(UniformInt.of(3, 7), properties.strength(3.0F, 3.0F)
+                    .requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    
+    public static final Block DEEPSLATE_RUBY_ORE = registerBlock("deepslate_ruby_ore",
+            properties -> new DropExperienceBlock(UniformInt.of(3, 7), properties.strength(4.5F, 3.0F)
+                    .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
+    public static final Block RUBY_BLOCK = registerBlock("ruby_block",
+            properties -> new Block(properties.strength(5.0F, 6.0F)
+                    .requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+
+    public static final Block SAPPHIRE_ORE = registerBlock("sapphire_ore",
+            properties -> new DropExperienceBlock(UniformInt.of(3, 7), properties.strength(3.0F, 3.0F)
+                    .requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+    public static final Block DEEPSLATE_SAPPHIRE_ORE = registerBlock("deepslate_sapphire_ore",
+            properties -> new DropExperienceBlock(UniformInt.of(3, 7), properties.strength(4.5F, 3.0F)
+                    .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
+    public static final Block SAPPHIRE_BLOCK = registerBlock("sapphire_block",
+            properties -> new Block(properties.strength(5.0F, 6.0F)
+                    .requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+
+    public static final Block TOPAZ_ORE = registerBlock("topaz_ore",
+            properties -> new DropExperienceBlock(UniformInt.of(3, 7), properties.strength(3.0F, 3.0F)
+                    .requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+    public static final Block DEEPSLATE_TOPAZ_ORE = registerBlock("deepslate_topaz_ore",
+            properties -> new DropExperienceBlock(UniformInt.of(3, 7), properties.strength(4.5F, 3.0F)
+                    .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
+    public static final Block TOPAZ_BLOCK = registerBlock("topaz_block",
+            properties -> new Block(properties.strength(5.0F, 6.0F)
+                    .requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+    
     public static final List<Block> BLOCK_LIST = List.of(
             TIN_ORE, DEEPSLATE_TIN_ORE, RAW_TIN_BLOCK, TIN_BLOCK,
             ALUMINUM_ORE, DEEPSLATE_ALUMINUM_ORE, RAW_ALUMINUM_BLOCK, ALUMINUM_BLOCK,
             PLATINUM_ORE, DEEPSLATE_PLATINUM_ORE, RAW_PLATINUM_BLOCK, PLATINUM_BLOCK,
             TITANIUM_ORE, RAW_TITANIUM_BLOCK, TITANIUM_BLOCK,
+            TUNGSTEN_ORE, RAW_TUNGSTEN_BLOCK, TUNGSTEN_BLOCK,
+            RUBY_ORE, DEEPSLATE_RUBY_ORE, RUBY_BLOCK,
+            SAPPHIRE_ORE, DEEPSLATE_SAPPHIRE_ORE, SAPPHIRE_BLOCK,
+            TOPAZ_ORE, DEEPSLATE_TOPAZ_ORE, TOPAZ_BLOCK
+    );
+
+    public static final List<Block> MINEABLE_WITH_PICKAXE = List.of(
+            TIN_ORE, DEEPSLATE_TIN_ORE, RAW_TIN_BLOCK, TIN_BLOCK,
+            ALUMINUM_ORE, DEEPSLATE_ALUMINUM_ORE, RAW_ALUMINUM_BLOCK, ALUMINUM_BLOCK,
+            PLATINUM_ORE, DEEPSLATE_PLATINUM_ORE, RAW_PLATINUM_BLOCK, PLATINUM_BLOCK,
+            TITANIUM_ORE, RAW_TITANIUM_BLOCK, TITANIUM_BLOCK,
+            TUNGSTEN_ORE, RAW_TUNGSTEN_BLOCK, TUNGSTEN_BLOCK,
+            RUBY_ORE, DEEPSLATE_RUBY_ORE, RUBY_BLOCK,
+            SAPPHIRE_ORE, DEEPSLATE_SAPPHIRE_ORE, SAPPHIRE_BLOCK,
+            TOPAZ_ORE, DEEPSLATE_TOPAZ_ORE, TOPAZ_BLOCK
+    );
+
+    public static final List<Block> INCORRECT_FOR_WOODEN_TOOL = List.of(
+            TIN_ORE, DEEPSLATE_TIN_ORE, RAW_TIN_BLOCK, TIN_BLOCK,
+            ALUMINUM_ORE, DEEPSLATE_ALUMINUM_ORE, RAW_ALUMINUM_BLOCK, ALUMINUM_BLOCK,
+            PLATINUM_ORE, DEEPSLATE_PLATINUM_ORE, RAW_PLATINUM_BLOCK, PLATINUM_BLOCK,
+            TITANIUM_ORE, RAW_TITANIUM_BLOCK, TITANIUM_BLOCK,
+            TUNGSTEN_ORE, RAW_TUNGSTEN_BLOCK, TUNGSTEN_BLOCK,
+            RUBY_ORE, DEEPSLATE_RUBY_ORE, RUBY_BLOCK,
+            SAPPHIRE_ORE, DEEPSLATE_SAPPHIRE_ORE, SAPPHIRE_BLOCK,
+            TOPAZ_ORE, DEEPSLATE_TOPAZ_ORE, TOPAZ_BLOCK
+    );
+
+    public static final List<Block> INCORRECT_FOR_STONE_TOOL = List.of(
+            PLATINUM_ORE, DEEPSLATE_PLATINUM_ORE, RAW_PLATINUM_BLOCK, PLATINUM_BLOCK,
+            TITANIUM_ORE, RAW_TITANIUM_BLOCK, TITANIUM_BLOCK,
+            TUNGSTEN_ORE, RAW_TUNGSTEN_BLOCK, TUNGSTEN_BLOCK,
+            RUBY_ORE, DEEPSLATE_RUBY_ORE, RUBY_BLOCK,
+            SAPPHIRE_ORE, DEEPSLATE_SAPPHIRE_ORE, SAPPHIRE_BLOCK,
+            TOPAZ_ORE, DEEPSLATE_TOPAZ_ORE, TOPAZ_BLOCK
+    );
+
+    public static final List<Block> INCORRECT_FOR_COPPER_TOOL = List.of(
+            TITANIUM_ORE, RAW_TITANIUM_BLOCK, TITANIUM_BLOCK,
+            TUNGSTEN_ORE, RAW_TUNGSTEN_BLOCK, TUNGSTEN_BLOCK,
+            RUBY_ORE, DEEPSLATE_RUBY_ORE, RUBY_BLOCK,
+            SAPPHIRE_ORE, DEEPSLATE_SAPPHIRE_ORE, SAPPHIRE_BLOCK,
+            TOPAZ_ORE, DEEPSLATE_TOPAZ_ORE, TOPAZ_BLOCK
+    );
+
+    public static final List<Block> INCORRECT_FOR_IRON_TOOL = List.of(
             TUNGSTEN_ORE, RAW_TUNGSTEN_BLOCK, TUNGSTEN_BLOCK
+    );
+
+    public static final List<Block> DROP_SELF = List.of(
+            RAW_TIN_BLOCK, RAW_ALUMINUM_BLOCK, RAW_PLATINUM_BLOCK, RAW_TITANIUM_BLOCK, RAW_TUNGSTEN_BLOCK,
+            TIN_BLOCK, ALUMINUM_BLOCK, PLATINUM_BLOCK, TITANIUM_BLOCK, TUNGSTEN_BLOCK,
+            RUBY_BLOCK, SAPPHIRE_BLOCK, TOPAZ_BLOCK
+    );
+
+    public static final List<Block> DROP_WHEN_SILK_TOUCH = List.of(
+            TIN_ORE, ALUMINUM_ORE, PLATINUM_ORE, TITANIUM_ORE, TUNGSTEN_ORE,
+            DEEPSLATE_TIN_ORE, DEEPSLATE_ALUMINUM_ORE, DEEPSLATE_PLATINUM_ORE,
+            RUBY_ORE, SAPPHIRE_ORE, TOPAZ_ORE,
+            DEEPSLATE_RUBY_ORE, DEEPSLATE_SAPPHIRE_ORE, DEEPSLATE_TOPAZ_ORE
+    );
+
+    public static final Map<Block, Item> ORE_DROPS = Map.ofEntries(
+            Map.entry(TIN_ORE, ModItems.RAW_TIN),
+            Map.entry(DEEPSLATE_TIN_ORE, ModItems.RAW_TIN),
+            Map.entry(ALUMINUM_ORE, ModItems.RAW_ALUMINUM),
+            Map.entry(DEEPSLATE_ALUMINUM_ORE, ModItems.RAW_ALUMINUM),
+            Map.entry(PLATINUM_ORE, ModItems.RAW_PLATINUM),
+            Map.entry(DEEPSLATE_PLATINUM_ORE, ModItems.RAW_PLATINUM),
+            Map.entry(TITANIUM_ORE, ModItems.RAW_TITANIUM),
+            Map.entry(TUNGSTEN_ORE, ModItems.RAW_TUNGSTEN)
+    );
+
+    public static final Map<Block, Item> ORE_DROPS_WITH_FORTUNE = Map.ofEntries(
+            Map.entry(RUBY_ORE, ModItems.RUBY),
+            Map.entry(DEEPSLATE_RUBY_ORE, ModItems.RUBY),
+            Map.entry(SAPPHIRE_ORE, ModItems.SAPPHIRE),
+            Map.entry(DEEPSLATE_SAPPHIRE_ORE, ModItems.SAPPHIRE),
+            Map.entry(TOPAZ_ORE, ModItems.TOPAZ),
+            Map.entry(DEEPSLATE_TOPAZ_ORE, ModItems.TOPAZ)
     );
 
     public static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {

@@ -1,0 +1,6 @@
+// 26.2	-999999999-01-01T00:00:00	SocketCraft/Tags for minecraft:block
+4721c649127505366b6c9386de69c6c1a6919ff6 data/minecraft/tags/block/incorrect_for_copper_tool.json
+e48df876b42bb72cbdc5660562ddcebabeb0800a data/minecraft/tags/block/incorrect_for_iron_tool.json
+a9929e5cd3561502209767136bfca228e7aa8676 data/minecraft/tags/block/incorrect_for_stone_tool.json
+c5ab13d147ac7f561b98e82398eba98fa43250cc data/minecraft/tags/block/incorrect_for_wooden_tool.json
+c5ab13d147ac7f561b98e82398eba98fa43250cc data/minecraft/tags/block/mineable/pickaxe.json

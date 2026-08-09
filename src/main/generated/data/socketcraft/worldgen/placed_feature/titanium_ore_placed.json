@@ -1,0 +1,32 @@
+{
+  "feature": "socketcraft:titanium_ore_vein",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "max_inclusive": 3,
+        "min_inclusive": 2
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:trapezoid",
+        "max_inclusive": {
+          "below_top": 0
+        },
+        "min_inclusive": {
+          "above_bottom": 0
+        },
+        "plateau": 24
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

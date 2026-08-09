@@ -1,0 +1,32 @@
+{
+  "feature": "socketcraft:platinum_ore_vein",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "max_inclusive": 4,
+        "min_inclusive": 2
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:trapezoid",
+        "max_inclusive": {
+          "absolute": 32
+        },
+        "min_inclusive": {
+          "absolute": -48
+        },
+        "plateau": 12
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}
